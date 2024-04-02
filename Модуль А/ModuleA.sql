@@ -57,7 +57,18 @@ select length(name) / (select avg(length(name)) from jobs) as name_analysis,
 	   salary / (select avg(salary) from jobs) as salary_analysis
 from jobs limit 10 --- Выполняем анализ, выводя соотношение среднего к определенному значению в стобце
 
-select * from jobs j --- Выводим всю таблицу
+select id,
+       name,
+       description,
+       salary,
+       publication_date,
+       region_name,
+       employer,
+       main_skills,
+       work_experience,
+       work_schedule 
+from jobs j 
+order by id --- Выводим всю таблицу
 
 
 
